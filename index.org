@@ -1,0 +1,4 @@
+#+title: Options in Capital Budgeting Analyses
+#+author: Matt Brigida, Ph.D.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
