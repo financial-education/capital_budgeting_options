@@ -2,3 +2,12 @@
 #+author: Matt Brigida, Ph.D.
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
+
+The mechanics of capital budgeting decisions are correctly taught in corporate finance courses, but often the spirit of the process is missed.  In general, we want to accept projects.  If you are not accepting projects, then your business is not growing.  This may be fine from a purely academic perspective, but in practice management is under pressure to grow.
+
+So should we accept negative NPV project, or somehow use more /rosy/ estimates in our calculations?  Absolutely not.  But then how can we grow the business while simultaneously maximizing shareholder wealth?  One way is to recognize, and value, the options that accepting a project may provide.
+
+
+Remember, *option values are always positive*.
+
+* /Strategic/ Options
