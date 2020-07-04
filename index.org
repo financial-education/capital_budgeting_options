@@ -10,4 +10,17 @@ So should we accept negative NPV project, or somehow use more /rosy/ estimates i
 
 Remember, *option values are always positive*.
 
+
+* A Brief History of Options
+
+
+
+
 * /Strategic/ Options
+
+** Example: 
+
+
+* Option to Expand/Abandon/Wait
+
+
