@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-07-04 Sat 12:32 -->
+<!-- 2024-05-18 Sat 18:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Options in Capital Budgeting Analyses</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Matt Brigida, Ph.D." />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -161,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -177,76 +191,23 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Options in Capital Budgeting Analyses</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb15904a">1. A Brief History of Options</a></li>
-<li><a href="#org2880b04">2. <i>Strategic</i> Options</a>
+<li><a href="#org00b2cb4">1. A Brief History of Options</a></li>
+<li><a href="#orgf568617">2. <i>Strategic</i> Options</a>
 <ul>
-<li><a href="#orgb9c52ca">2.1. Example:</a></li>
+<li><a href="#org915f21b">2.1. Example:</a></li>
 </ul>
 </li>
-<li><a href="#orge856954">3. Option to Expand/Abandon/Wait</a></li>
+<li><a href="#org5cfc27c">3. Option to Expand/Abandon/Wait</a></li>
 </ul>
 </div>
 </div>
@@ -264,31 +225,38 @@ Remember, <b>option values are always positive</b>.
 </p>
 
 
-<div id="outline-container-orgb15904a" class="outline-2">
-<h2 id="orgb15904a"><span class="section-number-2">1</span> A Brief History of Options</h2>
+<div id="outline-container-org00b2cb4" class="outline-2">
+<h2 id="org00b2cb4"><span class="section-number-2">1.</span> A Brief History of Options</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+After 1973, once we had a coherent model of an option's price, we began to employ the model to value many different types of options (real and financial) embedded in contracts. For example, there are options in mortgage contracts and callable bonds.
+</p>
+
+<p>
+Here we are concerned with <i>real</i> options that are afforded by capital budgeting decisions. 
+</p>
+</div>
 </div>
 
 
-
-
-<div id="outline-container-org2880b04" class="outline-2">
-<h2 id="org2880b04"><span class="section-number-2">2</span> <i>Strategic</i> Options</h2>
+<div id="outline-container-orgf568617" class="outline-2">
+<h2 id="orgf568617"><span class="section-number-2">2.</span> <i>Strategic</i> Options</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgb9c52ca" class="outline-3">
-<h3 id="orgb9c52ca"><span class="section-number-3">2.1</span> Example:</h3>
+<div id="outline-container-org915f21b" class="outline-3">
+<h3 id="org915f21b"><span class="section-number-3">2.1.</span> Example:</h3>
 </div>
 </div>
 
 
-<div id="outline-container-orge856954" class="outline-2">
-<h2 id="orge856954"><span class="section-number-2">3</span> Option to Expand/Abandon/Wait</h2>
+<div id="outline-container-org5cfc27c" class="outline-2">
+<h2 id="org5cfc27c"><span class="section-number-2">3.</span> Option to Expand/Abandon/Wait</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida, Ph.D.</p>
-<p class="date">Created: 2020-07-04 Sat 12:32</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2024-05-18 Sat 18:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

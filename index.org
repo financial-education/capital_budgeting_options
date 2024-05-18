@@ -13,7 +13,9 @@ Remember, *option values are always positive*.
 
 * A Brief History of Options
 
+After 1973, once we had a coherent model of an option's price, we began to employ the model to value many different types of options (real and financial) embedded in contracts. For example, there are options in mortgage contracts and callable bonds.
 
+Here we are concerned with /real/ options that are afforded by capital budgeting decisions. 
 
 
 * /Strategic/ Options
