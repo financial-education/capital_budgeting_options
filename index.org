@@ -1,6 +1,6 @@
 #+title: Options in Capital Budgeting Analyses
 #+author: Matt Brigida, Ph.D.
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 
 The mechanics of capital budgeting decisions are correctly taught in corporate finance courses, but often the spirit of the process is missed.  In general, we want to accept projects.  If you are not accepting projects, then your business is not growing.  This may be fine from a purely academic perspective, but in practice management is under pressure to grow.
